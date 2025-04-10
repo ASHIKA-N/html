@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Program DOM</title>
+    <style>
+        .ima {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            width: 300px;
+        }
+
+        .active-effect {
+            transform: scale(1.2) rotate(10deg);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .images {
+            margin: 80px 100px;
+            border: 4px solid red;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        p {
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            background-color: lightgreen;
+            text-align: center;
+            border-radius: 15px;
+            border: 4px solid yellow;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            transition: padding 0.3s ease-in-out;
+        }
+
+        p:hover {
+            padding: 30px;
+        }
+
+        .image {
+            width: 300px;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .images:hover {
+            transform: scale(1.2);
+            border: 4px solid red;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="images">
+    <img id="clickableImage1" src="https://cdn.educba.com/academy/wp-content/uploads/2016/02/fundamentals-of-programming-738x461.jpg" style="height:300px; width:300px;" alt="Attractive Image">
+    <p>FUNDAMENTAL PROGRAMMING</p>
+</div>
+<div class="images">
+    <img id="clickableImage2" src="https://2.bp.blogspot.com/-U5UbLbjuQvM/Wp-Pb-34TnI/AAAAAAAAAJg/bwLpWnM_L0E90DkN8OpzIm5ol8axYtcugCLcBGAs/s1600/7%2B1webdevelopment_1600x1200_021014.jpg" style="height:300px; width:300px;" alt="Attractive Image">
+    <p>WEB DEVELOPMENT</p>
+</div>
+<div class="images">
+    <img id="clickableImage3" src="https://images.yourstory.com/cs/1/b3c9ea44-ab5e-11e8-8691-f70342131e20/Top6%20Software%20Development%20Functions%20Crucial%20to%20your%20Business%20in%2020191542795654826.jpg?fm=png&auto=format" style="height:300px; width:300px;" alt="Attractive Image">
+    <p>SOFTWARE DEVELOPMENT</p>
+</div>
+<div class="images">
+    <img id="clickableImage4" src="https://startup.info/wp-content/uploads/2022/02/game-developmentpng.png" style="height:300px; width:300px;" alt="Attractive Image">
+    <p>GAME DEVELOPMENT</p>
+</div>
+<div class="images">
+    <img id="clickableImage5" src="https://www.dzoo.com.my/wp-content/uploads/2020/07/Evatronix_Mobile_applications_01_1920x1080.jpg" style="height:300px; width:300px;" alt="Attractive Image">
+    <p>MOBILE APP DEVELOPMENT</p>
+</div>
+<div class="images">
+    <img id="clickableImage6" src="https://universalcollegeofengineering.edu.in/wp-content/uploads/2020/09/AIML-Final-800x480.jpg" style="height:300px; width:300px;" alt="Attractive Image">
+    <p>AIML</p>
+</div>
+<div class="images">
+    <img id="clickableImage7" src="https://static.vecteezy.com/system/resources/previews/007/447/922/large_2x/concept-of-cyber-security-information-security-and-encryption-secure-access-to-user-s-personal-information-secure-internet-access-cybersecurity-photo.jpg" style="height:300px; width:300px;" alt="Attractive Image">
+    <p>CYBER-SECURITY</p>
+</div>
+<div class="images">
+    <img id="clickableImage8" src="https://robots.net/wp-content/uploads/2023/10/what-is-embedded-system-in-iot-1697423196.jpg" style="height:300px; width:300px;" alt="Attractive Image">
+    <p>EMBEDDED SYSTEM AND IOT</p>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // List of image IDs
+        const imageIds = [
+            "clickableImage1", "clickableImage2", "clickableImage3",
+            "clickableImage4", "clickableImage5", "clickableImage6",
+            "clickableImage7", "clickableImage8"
+        ];
+
+        imageIds.forEach(id => {
+            const img = document.getElementById(id);
+            if (img) {
+                img.addEventListener("click", function () {
+                    img.classList.toggle("active-effect");
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
